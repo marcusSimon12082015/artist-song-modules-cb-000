@@ -6,16 +6,16 @@ class Artist
   attr_reader :songs
 
   def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
+    @@list.detect{|a| a.name == name}
   end
 
   def initialize
-    @@artists << self
+    @@list << self
     @songs = []
   end
 
   def self.all
-    @@artists
+    @@list
   end
 
   def add_song(song)
@@ -30,5 +30,4 @@ class Artist
   def to_param
     name.downcase.gsub(' ', '-')
   end
-
 end
