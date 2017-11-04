@@ -1,7 +1,7 @@
 module Memorable
     attr_accessor :list
-  module ClassMethods
     @@list = []
+  module ClassMethods
     def reset_all
         self.all.clear
     end
