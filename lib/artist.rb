@@ -7,16 +7,16 @@ class Artist
   attr_reader :songs
 
   def self.find_by_name(name)
-    @@list.detect{|a| a.name == name}
+    mem::list.detect{|a| a.name == name}
   end
 
   def initialize
-    @@list << self
+    mem::list << self
     @songs = []
   end
 
   def self.all
-    @@list
+    mem::list
   end
 
   def add_song(song)
