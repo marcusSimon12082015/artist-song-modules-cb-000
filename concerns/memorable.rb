@@ -1,6 +1,6 @@
 module Memorable
-  @@artists = []
   module ClassMethods
+    @@artists = []
     def reset_all
         self.all.clear
     end
