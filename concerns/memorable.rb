@@ -1,9 +1,10 @@
 module Memorable
-  @@artists = []
-  def reset_all
-      self.all.clear
+  module ClassMethods
+    def reset_all
+        self.all.clear
     end
     def count
-      @@artists.count
+        @@artists.count
     end
+  end
 end
