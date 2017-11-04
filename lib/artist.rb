@@ -2,21 +2,20 @@ require 'pry'
 
 class Artist
   extend Memorable::ClassMethods
-  mem = Memorable::ClassMethods
   attr_accessor :name
   attr_reader :songs
 
   def self.find_by_name(name)
-    mem::list.detect{|a| a.name == name}
+    @@artists.detect{|a| a.name == name}
   end
 
   def initialize
-    mem::list << self
+    @@artists << self
     @songs = []
   end
 
   def self.all
-    mem::list
+    @@artists
   end
 
   def add_song(song)
